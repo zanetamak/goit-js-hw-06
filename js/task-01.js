@@ -1,17 +1,17 @@
-"use strict";
 
-//pobieram listę kategorii z html 
 const categoriesList = document.querySelectorAll("#categories li.item");
+const numberOfCategories = categoriesList.length;
 
-//zliczam ile tych kategorii jest
-const numberofCategories = categoriesList.length;
-
-console.log(`Number of categories: ${numberofCategories}`);
+console.log(`Number of categories: ${numberOfCategories}`);
 
 categoriesList.forEach((category) => {
-    const categoryTitle = category.querySelectorAll("h2");
+    const categoryTitle = category.querySelector("h2");
     const categoryItem = categoryTitle.textContent;
 
     const itemList = category.querySelectorAll("ul li")
     const itemQuantity = itemList.length;
-})
+
+  console.log(`Category: ${categoryItem}`);
+  console.log(`Elements: ${itemQuantity}`);
+});
+
