@@ -1,3 +1,5 @@
+"use strict";
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,3 +14,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+  const galleryList = document.querySelector('.gallery');
+
+    // Utworzenie elementów galerii i wstawienie ich do listy
+    const galleryItems = images.map(image => {
+      
+      const galleryItem = document.createElement('li');
+      galleryItem.classList.add('gallery-item');
+      galleryItem.insertAdjacentHTML('beforeend', `
+        <img src="${image.url}" alt="${image.alt}">
+      `);
+      return galleryItem;
+    });
+
+    // Dodanie elementów galerii do listy
+galleryList.insertAdjacentHTML('beforeend', galleryItem.join(''));
