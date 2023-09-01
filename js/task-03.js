@@ -22,7 +22,7 @@ const images = [
       const galleryItem = document.createElement('li');
       galleryItem.classList.add('gallery-item');
       galleryItem.insertAdjacentHTML('beforeend', `
-        <img src="${image.url}" alt="${image.alt}">
+        <img src="${image.url}" alt="${image.alt}" class='gallery-image'>
       `);
       return galleryItem;
     });
