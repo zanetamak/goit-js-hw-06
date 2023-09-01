@@ -13,8 +13,10 @@ function getRandomHexColor() {
 
 const changeColor = () => {
   let currentColor = getRandomHexColor();
-  backgroundColored.style.backkgroundColor = currentColor;
-  textSpan.innerHTML = currentColor;
+  backgroundColored.style.backgroundColor = currentColor;
+  textSpan.textContent = currentColor;
 };
 bthChangeColor.addEventListener('click', changeColor);
   
+
+

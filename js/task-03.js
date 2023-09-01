@@ -27,5 +27,5 @@ const images = [
       return galleryItem;
     });
 
-galleryList.insertAdjacentHTML('beforeend', galleryItems.join(''));
+galleryList.append(...galleryItems);
 

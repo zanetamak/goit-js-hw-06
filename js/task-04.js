@@ -7,12 +7,12 @@ let counterValue = 0;
 
 const decrease = () => {
   counterValue --;
-  value.innerHTML = counterValue;
+  value.textContent = counterValue;
 };
 
 const increase = () => {
   counterValue ++;
-  value.innerHTML = counterValue;
+  value.textContent = counterValue;
 };
 
 bthDecrement.addEventListener('click', decrease);
